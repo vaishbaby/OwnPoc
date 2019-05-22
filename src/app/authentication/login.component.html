@@ -1,0 +1,15 @@
+<div class="container">
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+<h3>Login Form</h3>
+<div *ngIf="invalidCredentialMsg" [ngClass]="error">{{invalidCredentialMsg}}</div>
+<div>
+	<form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+	  <p>User Name: <input formControlName="username" class="form-control"></p>
+	  <p>Password: <input type="password" class="form-control" formControlName="password"></p>
+	  <p><button type="submit" class="btn btn-primary" >Submit</button></p> 
+	</form>
+</div>
+</div>
+</div>
+</div>
